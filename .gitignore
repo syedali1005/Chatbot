@@ -1,0 +1,26 @@
+# Virtual environments
+chatbot-env/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Flask cache files
+instance/
+*.db
+*.sqlite3
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# MacOS and Windows
+.DS_Store
+Thumbs.db
