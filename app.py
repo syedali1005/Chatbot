@@ -1,7 +1,8 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import random
+import os
 
-app = Flask(__name__)  # Corrected __name__ here
+app = Flask(__name__)
 
 # Simple responses for demonstration
 responses = [
@@ -16,5 +17,9 @@ def chat():
     # For now, return a random response
     return jsonify({"response": random.choice(responses)})
 
-if __name__ == '__main__':  # Corrected __name__ here
+@app.route('/')
+def index():
+    return render_template('index.html')  # Render the HTML file
+
+if __name__ == '__main__':
     app.run(debug=True)
